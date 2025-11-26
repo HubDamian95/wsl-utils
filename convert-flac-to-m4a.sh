@@ -3,9 +3,10 @@ set -euo pipefail
 
 #To be used in WSL, needs ffmpeg to be installed on WSL as well as dos2unix
 #dos2unix convert-flac-to-m4a.sh
+WINUSER="$(whoami)"
 
-SRC="/mnt/c/Users/hubd/Music"
-DST="/mnt/c/Users/hubd/Music/m4a"
+SRC="/mnt/c/Users/$WINUSER/Music"
+DST="/mnt/c/Users/$WINUSER/Music/m4a"
 
 find "$SRC" -type f -name "*.flac" -print0 |
 while IFS= read -r -d '' f; do
