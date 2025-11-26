@@ -1,8 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+#I'm using this to convert .flac to .m4a
+
+#usage:
 #To be used in WSL, needs ffmpeg to be installed on WSL as well as dos2unix
+#Have FLAC files in folders in your music folder.
+#Place this file into /mnt/c/Users/$WINUSER/Music
 #dos2unix convert-flac-to-m4a.sh
+#chmod 755 ./convert-flac-to-m4a.sh
+#./convert-flac-to-m4a.sh
 WINUSER="$(whoami)"
 
 SRC="/mnt/c/Users/$WINUSER/Music"
